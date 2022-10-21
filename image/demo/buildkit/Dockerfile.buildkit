@@ -16,7 +16,7 @@ RUN --mount=type=cache,target=/app/node_modules,id=my_app_npm_module,sharing=loc
 # --mount=type=cache,target=/app/dist,id=my_app_dist,sharing=locked \
         npm run build
 
-FROM nginx:alpine
+FROM nginx:1.23.2-alpine
 
 # COPY --from=builder /app/dist /app/dist
 

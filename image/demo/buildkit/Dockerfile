@@ -11,6 +11,6 @@ COPY src /app/src
 
 RUN npm run build
 
-FROM nginx:alpine
+FROM nginx:1-alpine3.20
 
 COPY --from=builder /app/dist /app/dist
